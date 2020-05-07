@@ -4,7 +4,7 @@ var siteinfo = {
     acid: "2",
     multiid: "0",
     version: "5.9.7",
-  siteroot: "http://www.medicalhy.com/app/index.php",
+  siteroot: "http://www.yl.com/app/index.php",
     // siteroot: "http://106.52.74.174/app/index.php",
     design_method: "3"
 };
