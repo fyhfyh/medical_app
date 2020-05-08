@@ -101,7 +101,7 @@
         <view>
             <navigator hoverClass="none" openType="redirect" url="/hyb_yl/zhuanjialiebiao/zhuanjialiebiao">
                 <image src="/hyb_yl/images/tab2.png"></image>
-                <text style="color:#06AC85;">通讯录</text>
+                <text style="color:#06AC85;">资讯</text>
             </navigator>
         </view>
         <view>

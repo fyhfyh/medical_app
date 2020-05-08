@@ -342,7 +342,7 @@
             </view>
             <view bindtap="toast1">
                 <image src="/hyb_yl/images/tab02.png"></image>
-                <text>通讯录</text>
+                <text>资讯</text>
             </view>
             <view bindtap="toast2">
                 <image src="/hyb_yl/images/tab03.png"></image>
