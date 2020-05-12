@@ -2,6 +2,7 @@ var app = getApp();
 
 Page({
     data: {
+        num:'0.00',
         zhiwuss: [],
         zhiwu: [],
         userInfo: {},
@@ -461,11 +462,12 @@ Page({
             },
             success: function(a) {
                 for (var t = 0, n = 0, i = a.data.data.d_txmoney.length; n < i; n++) t += a.data.data.d_txmoney[n].d_txmoney;
+            
                 o.setData({
                     zhuanmoney: a.data.data.overmoney,
-                    num: t.toFixed(2) == 'NaN' ? '0.00': t.toFixed(2)
+                  num:  t.toFixed(2)
                 });
-              
+             
             },
             fail: function(a) {
                 console.log(a);
