@@ -24,7 +24,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.11.0",
-	"appid": "wx171aa4cf825c8522",
+	"appid": "wx29799e68fe303e07",
 	"projectname": "%E5%8C%BB%E7%96%97",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -41,13 +41,64 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "hyb_yl/zhuanjiazhuye/zhuanjiazhuye",
+					"pathName": "hyb_yl/zhuanjiazhuye/zhuanjiazhuye",
+					"query": "id=23&u_id=",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "hyb_yl/answer_detail/answer_detail",
+					"pathName": "hyb_yl/answer_detail/answer_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "hyb_yl/check/check",
+					"pathName": "hyb_yl/check/check",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "hyb_yl/zhuan_da/zhuan_da",
+					"pathName": "hyb_yl/zhuan_da/zhuan_da",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "hyb_yl/zhuan_liao/zhuan_liao",
+					"pathName": "hyb_yl/zhuan_liao/zhuan_liao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "hyb_yl/zhuanjiatiwen/zhuanjiatiwen",
+					"pathName": "hyb_yl/zhuanjiatiwen/zhuanjiatiwen",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }

@@ -321,7 +321,7 @@ Page((_defineProperty(_Page = {
     },
     toast1: function(e) {
         wx.redirectTo({
-            url: "/hyb_yl/zhuanjialiebiao/zhuanjialiebiao"
+          url: "/hyb_yl/jibingyufang/jibingyufang"
         });
     },
     toast2: function() {
