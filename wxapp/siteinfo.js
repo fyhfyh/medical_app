@@ -1,5 +1,5 @@
 var siteinfo = {
-    name: "医疗小程序",
+    name: "六齿龄技术服务中心",
     uniacid: "2",
     acid: "2",
     multiid: "0",

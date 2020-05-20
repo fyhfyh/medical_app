@@ -649,6 +649,7 @@ button[plain] {
     height: 66rpx;
     line-height: 66rpx;
     margin-bottom: 20rpx;
+    margin-left: 1.8rem;
     background-color: #06AC85;
     color: #fff;
 }

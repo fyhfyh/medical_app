@@ -6,8 +6,10 @@ Page({
             time: "29",
             time1: "四月",
             money: "12154.12",
-            index: "000"
-        } ]
+            index: "000",
+           
+        } ],
+      
     },
     onLoad: function(t) {
         var e = this, o = t.docmoney, a = wx.getStorageSync("color");
@@ -25,9 +27,11 @@ Page({
                 openid: n
             },
             success: function(t) {
+           
                 console.log(t), e.setData({
-                    shouru: t.data.data.d_txmoney
+                  shouru:t.data.data.d_txmoney
                 });
+              
             },
             fail: function(t) {
                 console.log(t);
