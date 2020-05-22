@@ -20,7 +20,7 @@
                 </view>
                 <view class="list-imgss df jcsb" wx:if="{{item.content_thumb}}">
                     <view wx:for="{{item.content_thumb}}" wx:for-item="itemimg" wx:key="unique">
-                        <image mode="aspectFill" src="{{dataurl}}{{itemimg}}" style="width:220rpx;height:160rpx;" wx:if="{{item.content_thumb}}"></image>
+                        <image mode="aspectFill" src="{{itemimg}}" style="width:220rpx;height:160rpx;" wx:if="{{item.content_thumb}}"></image>
                     </view>
                 </view>
                 <view class="list-tiem">

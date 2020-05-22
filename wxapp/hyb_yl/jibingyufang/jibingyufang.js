@@ -57,7 +57,7 @@ Page({
         console.log(e), o.setData({
             currentTab: e
         }), null != e ? app.util.request({
-            url: "entry/wxapp/Zixunyi",
+          url: "entry/wxapp/Zixunall",
             data: {
                 zx_id: e
             },

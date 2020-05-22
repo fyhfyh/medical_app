@@ -31,11 +31,13 @@ Page({
                 img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/yuyue.png",
                 con: "我的预约",
                 btn: "yuyueClick"
-            }, {
-                img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/dingdan.png",
-                con: "我的课程",
-                btn: "dingdanClick"
-            }, {
+            }, 
+            // {
+            //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/dingdan.png",
+            //     con: "我的课程",
+            //     btn: "dingdanClick"
+            // }, 
+            {
                 img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/tiwen.png",
                 con: "我的提问",
                 btn: "tiwenClick"
@@ -67,19 +69,23 @@ Page({
             img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.2.png",
             con: "会话中心",
             btn: "dingdan1Click"
-        }, {
-            img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.5.png",
-            con: "病例库",
-            btn: "yutiClick"
-        }, {
-            img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.6.png",
-            con: "平台报告",
-            btn: "tiyuClick"
-        }, {
-            img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/cf.png",
-            con: "我的处方",
-            btn: "Mykchufang"
-        }, {
+        },
+        //  {
+        //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.5.png",
+        //     con: "病例库",
+        //     btn: "yutiClick"
+        // }, 
+        // {
+        //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.6.png",
+        //     con: "平台报告",
+        //     btn: "tiyuClick"
+        // },
+        //  {
+        //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/cf.png",
+        //     con: "我的处方",
+        //     btn: "Mykchufang"
+        // }, 
+        {
             img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.8.png",
             con: "绑定手机",
             btn: "phoneClick"
@@ -99,15 +105,19 @@ Page({
             img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/微信图片_20180806101701.png",
             con: "我的理赔",
             btn: "lipeiClick"
-        }, {
-            img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.9.png",
-            con: "健康档案",
-            btn: "huanListClick"
-        }, {
-            img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.6.png",
-            con: "体检报告",
-            btn: "tijiabnbaogao"
-        } ],
+        }, 
+        // {
+        //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.9.png",
+        //     con: "健康档案",
+        //     btn: "huanListClick"
+        // }, 
+        // {
+        //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.6.png",
+        //     con: "体检报告",
+        //     btn: "tijiabnbaogao"
+        // }
+         ],
+
         gongjuArr1: [ {
             img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.11.png",
             con: "编辑资料",
@@ -124,11 +134,14 @@ Page({
             img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.2.png",
             con: "我的聊天",
             btn: "liaoClick"
-        }, {
-            img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.9.png",
-            con: "我的患者",
-            btn: "huanDetailClick"
-        } ]
+        }
+        // , 
+        // {
+        //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.9.png",
+        //     con: "我的患者",
+        //     btn: "huanDetailClick"
+        // } 
+        ]
     },
     fuwuorder: function(a) {
         wx.navigateTo({

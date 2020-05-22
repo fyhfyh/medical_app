@@ -248,15 +248,15 @@
         </view>
         <view wx:else></view>
         <view class="serve">
-            <view class="serve-top">
+            <!-- <view class="serve-top">
                 <view class="serve-title" wx:if="{{biaoti3.title3==''||biaoti3.title3==undefined}}">疾病指南课堂</view>
                 <view class="serve-title" wx:if="{{biaoti3.title3!==''}}">{{biaoti3.title3}}</view>
                 <view bindtap="jibing" class="more" data-data="{{biaoti3.title3}}">
                     <text>更多</text>
                     <image src="/hyb_yl/images/yjt.png"></image>
                 </view>
-            </view>
-            <view class="serve-bottom ketang">
+            </view> -->
+            <!-- <view class="serve-bottom ketang">
                 <view class="ketang-list" wx:for="{{tjvideo}}" wx:for-item="video" wx:key="unique">
                     <navigator hoverClass="none" openType="navigate" url="/hyb_yl/jibingxq/jibingxq?id={{video.id}}&sroomtitle={{video.sroomtitle}}">
                         <view bindtap="video" class="tetang-name" data-data="" data-id="{{video.id}}">
@@ -280,11 +280,11 @@
                         </view>
                     </navigator>
                 </view>
-            </view>
+            </view> -->
         </view>
         <view class="serve" wx:if="{{biaoti3.title3cp!==''}}">
             <view class="serve-top">
-                <view class="serve-title" wx:if="{{biaoti3.title3==''||biaoti3.title3==undefined}}">疾病指南课堂</view>
+                <!-- <view class="serve-title" wx:if="{{biaoti3.title3==''||biaoti3.title3==undefined}}">疾病指南课堂</view> -->
                 <view class="serve-title" wx:if="{{biaoti3.title3cp!==''}}">{{biaoti3.title3cp}}</view>
             </view>
             <view class="serve-bottom ketang">
