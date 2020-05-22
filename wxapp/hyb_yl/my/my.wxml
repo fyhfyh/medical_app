@@ -55,7 +55,7 @@
     <view class="bsbb pl18 pr18 nav">
         <view class="nav-scr bgcf bdr20 df bsbb p28">
             <view bindtap="zongClick" class="df fdc aic jcc w50" data-docmoney="{{num}}">
-                <text class="fs40 c6" wx:if="{{num!==null}}">{{num}}</text>
+                <text class="fs40 c6" wx:if="{{num!==null || num !== ''}}">{{num}}</text>
                 <text class="fs40 c6" wx:else>0.00</text>
                 <text class="fs26 c9">总收益金额</text>
             </view>
