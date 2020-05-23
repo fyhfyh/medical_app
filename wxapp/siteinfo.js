@@ -5,7 +5,7 @@ var siteinfo = {
     multiid: "0",
     version: "5.9.7",
   siteroot: "https://wapp.mjkq29.com/app/index.php",
-    // siteroot: "http://106.52.74.174/app/index.php",
+  //siteroot: "http://www.yl.com/app/index.php",
     design_method: "3"
 };
 
