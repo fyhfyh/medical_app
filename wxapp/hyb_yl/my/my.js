@@ -480,7 +480,11 @@ Page({
                     zhuanmoney: a.data.data.overmoney,
                   num:  t.toFixed(2)
                 });
-             
+              if(o.data.num == 'NaN'){
+                o.setData({
+                  num:'0.00'
+                })
+              }
             },
             fail: function(a) {
                 console.log(a);
