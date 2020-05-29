@@ -1,6 +1,7 @@
 {
   "pages": [
     "hyb_yl/index/index",
+    "hyb_yl/atabs/tabs",
     "hyb_yl/record_dangan01/record_1",
     "hyb_yl/record_dangan02/record_2",
     "hyb_yl/record_dangan03/record_3",

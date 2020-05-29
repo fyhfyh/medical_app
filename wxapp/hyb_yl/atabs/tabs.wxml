@@ -1,0 +1,41 @@
+<view class='ticket-container'>
+    <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}"
+      scroll-top="{{scrollTop}}">
+      <!--Tab布局-->
+      <view class='title'>
+        <view class="{{0 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='0'>
+          <text>正畸</text>
+          <hr class="line-style"/>
+        </view>
+        
+        <view class="{{1 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='1'>
+          <text>拔牙</text>
+          <hr class="line-style"/>
+        </view>
+        <view class="{{2 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='2'>
+          <text>根管治疗</text>
+          <hr class="line-style" />
+        </view>
+        <view class="{{3 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='3'>
+          <text>种植</text>
+          <hr class="line-style" />
+        </view>
+      </view>
+ 
+      <!--内容布局-->
+      <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+        <swiper-item class='swiper'>
+          1
+        </swiper-item>
+        <swiper-item class='swiper' class='swiper'>
+          2
+        </swiper-item>
+        <swiper-item class='swiper' class='swiper'>
+          3
+        </swiper-item>
+        <swiper-item class='swiper' class='swiper'>
+          4
+        </swiper-item>
+      </swiper>
+    </scroll-view>
+</view>

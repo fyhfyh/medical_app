@@ -1,3 +1,33 @@
+  <!-- tab -->
+<view class='ticket-container'>
+    <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}"
+      scroll-top="{{scrollTop}}">
+      <!--Tab布局-->
+      <view class='title'>
+        <view class="{{0 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='0'>
+          <text>正畸</text>
+          <hr class="line-style"/>
+        </view>
+        
+        <view class="{{1 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='1'>
+          <text>拔牙</text>
+          <hr class="line-style"/>
+        </view>
+        <view class="{{2 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='2'>
+          <text>根管治疗</text>
+          <hr class="line-style" />
+        </view>
+        <view class="{{3 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='3'>
+          <text>种植</text>
+          <hr class="line-style" />
+        </view>
+         <view class="{{4 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='4'>
+          <text>种植</text>
+          <hr class="line-style" />
+        </view>
+      </view>
+    
+  <!-- tab -->
 <view class="box">
     <view class="doctor">
         <view class="doctor-left lf">
@@ -36,6 +66,11 @@
             <input name="q_dname" style="display:none;" value="{{xiangqing.z_name}}"></input>
             <input name="q_zhiwei" style="display:none;" value="{{xiangqing.z_zhiwu}}"></input>
             <input name="q_docthumb" style="display:none;" value="{{xiangqing.z_thumbs}}"></input>
+
+<!--内容布局-->
+      <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+        <swiper-item class='swiper'>
+          <!-- tab内容开始 -->
             <view class="section">
                 <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="tiwen" placeholder="向医生提问，等TA回答。超过48小时未作答或医生建议到医院问诊，全额退款。" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
                     <text>{{wordLength}}/{{xiangqing.we}}</text>
@@ -52,6 +87,22 @@
                     <image bindtap="uploadpic" class="tianjia {{hide?'hide':'show'}}" src="/hyb_yl/images/tjimg.png"></image>
                 </view>
             </view>
+<!-- tab内容结束 -->
+        </swiper-item>
+        <swiper-item class='swiper' class='swiper'>
+          2
+        </swiper-item>
+        <swiper-item class='swiper' class='swiper'>
+          3
+        </swiper-item>
+        <swiper-item class='swiper' class='swiper'>
+          4
+        </swiper-item>
+        <swiper-item class='swiper' class='swiper'>
+          5
+        </swiper-item>
+      </swiper>
+
             <view class="tishi">
                 <image bindtap="tishi" name="sj_type" src="/hyb_yl/images/{{tishi?'suc':'success'}}.png"></image>
         公开提问，请避免上传过于隐私的内容.
@@ -60,4 +111,7 @@
             <button formType="submit" hoverClass="none" wx:else>马上提问</button>
         </form>
     </view>
+</view>
+
+    </scroll-view>
 </view>

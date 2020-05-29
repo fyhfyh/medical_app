@@ -13,6 +13,7 @@ var app = getApp();
 
 Page({
     data: (_data = {
+        currentIndex: 0,//tab
         guanzhu: !0,
         wordLength: 0,
         imgs: [],
@@ -28,6 +29,24 @@ Page({
         upload_picture_list: ""
     }, _defineProperty(_data, "imgs", []), _defineProperty(_data, "upload_picture_list", []), 
     _data),
+    
+    // //swiper切换时会调用
+    pagechange: function (e) {
+      if ("touch" === e.detail.source) {
+        let currentPageIndex = e.detail.current
+        this.setData({
+          currentIndex: currentPageIndex
+        })
+      }
+    },
+    //用户点击tab时调用
+    titleClick: function (e) {
+      let currentPageIndex =
+        this.setData({
+          //拿到当前索引并动态改变
+          currentIndex: e.currentTarget.dataset.idx
+        })
+    },
     tishi: function() {
         var t = this.data.imgs;
         0 == this.data.tishi ? (t = null, this.setData({

@@ -60,7 +60,7 @@
 					"id": 0,
 					"name": "hyb_yl/zhuanjiazhuye/zhuanjiazhuye",
 					"pathName": "hyb_yl/zhuanjiazhuye/zhuanjiazhuye",
-					"query": "id=23&u_id=",
+					"query": "id=31&u_id=4",
 					"scene": null
 				},
 				{
@@ -92,9 +92,16 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 5,
 					"name": "hyb_yl/zhuanjiatiwen/zhuanjiatiwen",
 					"pathName": "hyb_yl/zhuanjiatiwen/zhuanjiatiwen",
+					"query": "id=31&openid=otwtA5Yb9kWBviFqE9YHBv19kHcg",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "hyb_yl/atabs/tabs",
+					"pathName": "hyb_yl/atabs/tabs",
 					"query": "",
 					"scene": null
 				}
