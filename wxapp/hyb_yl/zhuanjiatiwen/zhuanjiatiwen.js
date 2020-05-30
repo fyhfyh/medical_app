@@ -68,7 +68,7 @@ Page({
     uploadImage: function() {
         var e = this, a = e.data.imgs;
         wx.chooseImage({
-            count: 6,
+            count: 15,
             sizeType: [ "original", "compressed" ],
             sourceType: [ "album", "camera" ],
             success: function(t) {
@@ -444,7 +444,7 @@ Page({
             });
         }
         console.log(e), wx.chooseImage({
-            count: 6,
+            count: 15,
             sizeType: [ "original", "compressed" ],
             sourceType: [ "album", "camera" ],
             success: function(t) {
@@ -452,7 +452,7 @@ Page({
                 for (var a in e) e[a].upload_percent = 0, e[a].path_server = "", n.push(e[a]);
                 for (var o in i.setData({
                     upload_picture_list: n
-                }), 6 == n.length && i.setData({
+                }), 15 == n.length && i.setData({
                     hide: !0
                 }), n) 0 == n[o].upload_percent && s(i, n, o);
             }

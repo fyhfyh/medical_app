@@ -22,7 +22,7 @@
           <hr class="line-style" />
         </view>
          <view class="{{4 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='4'>
-          <text>种植</text>
+          <text>美学修复</text>
           <hr class="line-style" />
         </view>
       </view>
