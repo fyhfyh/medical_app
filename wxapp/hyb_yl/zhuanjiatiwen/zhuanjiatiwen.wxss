@@ -11,7 +11,12 @@ page {
     align-items: flex-start;
     align-content: flex-start;
 }
+.radio-view{
+  margin-left: 25px;
+  margin-bottom: 10px;
+  display: flex;
 
+}
 .picture_item {
     margin: 10px;
     position: relative;
@@ -121,7 +126,18 @@ image {
 .doctor-num view text {
     color: #fa8d87;
 }
+.input_view{
+   height: 55rpx;
+   font-size: 30rpx;
+   border: 1rpx solid #b8b8b8;
+   float: right;
+  
+}
+.weui-cells__title{
+  font-size: 15px;
+  float: left;
 
+}
 .doctor-num view.doctor-num-xian {
     width: 1rpx;
     height: 26rpx;
@@ -196,6 +212,8 @@ image {
     position: relative;
     border: 1rpx solid #b8b8b8;
     border-radius: 10rpx;
+    margin-bottom: 10px;
+
 }
 
 .section textarea text {
@@ -209,7 +227,7 @@ image {
 .img-txt {
     width: 100%;
     font-size: 25rpx;
-    color: #444;
+    color: red;
 }
 
 .img {
@@ -368,7 +386,7 @@ button::after {
   flex: 1;
   overflow: scroll;
   margin: 0 auto;
-  height: 300px;
+  height: 730rpx;
 
 }
  

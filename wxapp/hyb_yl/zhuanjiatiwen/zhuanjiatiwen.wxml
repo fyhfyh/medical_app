@@ -10,7 +10,7 @@
         </view>
         
         <view class="{{1 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='1'>
-          <text>拔牙</text>
+          <text>颌面外科</text>
           <hr class="line-style"/>
         </view>
         <view class="{{2 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='2'>
@@ -72,12 +72,33 @@
         <swiper-item class='swiper'>
           <!-- tab内容开始 -->
             <view class="section">
-                <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="tiwen" placeholder="向医生提问，等TA回答。超过48小时未作答或医生建议到医院问诊，全额退款。" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
-                    <text>{{wordLength}}/{{xiangqing.we}}</text>
-                </textarea>
+              
+                <label>主诉： </label>
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                       <text>{{wordLength}}/{{xiangqing.we}}</text>
+                       </textarea>
             </view>
             <view class="section">
-                <view class="img-txt">*此处可上传1-6张图片，让医生更直观了解状况</view>
+                   <label>性别：</label>
+                      <radio-group bindchange="radioChange">
+                         <view class="radio-view" wx:for="{{sex}}" wx:key="{{item.value}}">
+                            <radio value="{{item.value}}" class="radio-view" checked="true" color="#06AC85"/>
+                               <view class="radio-view">{{item.name}}</view>
+                           </view>
+                      </radio-group>            
+            </view>
+            <view class="section"> 
+                    <label>年龄：</label>  
+                    <input type="text" class="input_view"></input>         
+            </view>
+               <view class="section"> 
+                    <label>患者病史：</label>  
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="bingshi" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                    <text>{{wordLength}}/{{xiangqing.we}}</text>
+                </textarea>      
+            </view>
+            <view class="section">
+                <view class="img-txt">*请分别上传《面部正面照、面部正面微笑照、面部左45度照、面部右45度照、面部左90度照、面部右90度照（注：平时前方）、口内正面照、口内侧面凸度图、口内左45度照、口内右45度照（注：排到六的正常咬颌）、口内上颌照、口内下颌照、取的模型照、曲面断层片、头颅侧位片》</view>
                 <view class="img">
                     <view class="img-list" wx:for="{{upload_picture_list}}" wx:key="img">
                         <image bindtap="deleteimg" class="jian" data-index="{{index}}" src="/hyb_yl/images/jian.png"></image>
@@ -86,20 +107,166 @@
                     </view>
                     <image bindtap="uploadpic" class="tianjia {{hide?'hide':'show'}}" src="/hyb_yl/images/tjimg.png"></image>
                 </view>
-            </view>
+           </view>
 <!-- tab内容结束 -->
         </swiper-item>
         <swiper-item class='swiper' class='swiper'>
-          2
+             <view class="section">
+              
+                <label>主诉： </label>
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                       <text>{{wordLength}}/{{xiangqing.we}}</text>
+                       </textarea>
+            </view>
+            <view class="section">
+                   <label>性别：</label>
+                      <radio-group bindchange="radioChange">
+                         <view class="radio-view" wx:for="{{sex}}" wx:key="{{item.value}}">
+                            <radio value="{{item.value}}" class="radio-view" checked="true" color="#06AC85"/>
+                               <view class="radio-view">{{item.name}}</view>
+                           </view>
+                      </radio-group>            
+            </view>
+            <view class="section"> 
+                    <label>年龄：</label>  
+                    <input type="text" class="input_view"></input>         
+            </view>
+               <view class="section"> 
+                    <label>患者病史：</label>  
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="bingshi" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                    <text>{{wordLength}}/{{xiangqing.we}}</text>
+                </textarea>      
+            </view>
+          <!-- X片 -->
+<view class="section">
+                <view class="img-txt">*请上传《X片》至少一张</view>
+                <view class="img">
+                    <view class="img-list" wx:for="{{upload_picture_list}}" wx:key="img">
+                        <image bindtap="deleteimg" class="jian" data-index="{{index}}" src="/hyb_yl/images/jian.png"></image>
+                        <image class="border" src="{{item.path}}"></image>
+                        <input name="fujian{{index}}" style="display:none;" value="{{thumb}}"></input>
+                    </view>
+                    <image bindtap="uploadpic" class="tianjia {{hide?'hide':'show'}}" src="/hyb_yl/images/tjimg.png"></image>
+                </view>
+           </view>
+
         </swiper-item>
         <swiper-item class='swiper' class='swiper'>
-          3
+             <view class="section">
+              
+                <label>主诉： </label>
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                       <text>{{wordLength}}/{{xiangqing.we}}</text>
+                       </textarea>
+            </view>
+            <view class="section">
+                   <label>性别：</label>
+                      <radio-group bindchange="radioChange">
+                         <view class="radio-view" wx:for="{{sex}}" wx:key="{{item.value}}">
+                            <radio value="{{item.value}}" class="radio-view" checked="true" color="#06AC85"/>
+                               <view class="radio-view">{{item.name}}</view>
+                           </view>
+                      </radio-group>            
+            </view>
+            <view class="section"> 
+                    <label>年龄：</label>  
+                    <input type="text" class="input_view"></input>         
+            </view>
+               <view class="section"> 
+                    <label>患者病史：</label>  
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="bingshi" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                    <text>{{wordLength}}/{{xiangqing.we}}</text>
+                </textarea>      
+            </view>
+
+            <view class="section"> 
+                    <label>初步诊断：</label>  
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="cbzd" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                    <text>{{wordLength}}/{{xiangqing.we}}</text>
+                </textarea>      
+            </view>
+            <view class="section">
+                <view class="img-txt">*请上传《X片》至少一张</view>
+                <view class="img">
+                    <view class="img-list" wx:for="{{upload_picture_list}}" wx:key="img">
+                        <image bindtap="deleteimg" class="jian" data-index="{{index}}" src="/hyb_yl/images/jian.png"></image>
+                        <image class="border" src="{{item.path}}"></image>
+                        <input name="fujian{{index}}" style="display:none;" value="{{thumb}}"></input>
+                    </view>
+                    <image bindtap="uploadpic" class="tianjia {{hide?'hide':'show'}}" src="/hyb_yl/images/tjimg.png"></image>
+                </view>
+           </view>
+
         </swiper-item>
         <swiper-item class='swiper' class='swiper'>
-          4
+               <view class="section">
+              
+                <label>主诉： </label>
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                       <text>{{wordLength}}/{{xiangqing.we}}</text>
+                       </textarea>
+            </view>
+            <view class="section">
+                   <label>性别：</label>
+                      <radio-group bindchange="radioChange">
+                         <view class="radio-view" wx:for="{{sex}}" wx:key="{{item.value}}">
+                            <radio value="{{item.value}}" class="radio-view" checked="true" color="#06AC85"/>
+                               <view class="radio-view">{{item.name}}</view>
+                           </view>
+                      </radio-group>            
+            </view>
+            <view class="section"> 
+                    <label>年龄：</label>  
+                    <input type="text" class="input_view"></input>         
+            </view>
+               <view class="section"> 
+                    <label>患者病史：</label>  
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="bingshi" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                    <text>{{wordLength}}/{{xiangqing.we}}</text>
+                </textarea>      
+            </view>
+
+           <!-- X片 -->
+           <view class="section">
+                <view class="img-txt">*请上传《X片》至少一张</view>
+                <view class="img">
+                    <view class="img-list" wx:for="{{upload_picture_list}}" wx:key="img">
+                        <image bindtap="deleteimg" class="jian" data-index="{{index}}" src="/hyb_yl/images/jian.png"></image>
+                        <image class="border" src="{{item.path}}"></image>
+                        <input name="fujian{{index}}" style="display:none;" value="{{thumb}}"></input>
+                    </view>
+                    <image bindtap="uploadpic" class="tianjia {{hide?'hide':'show'}}" src="/hyb_yl/images/tjimg.png"></image>
+                </view>
+           </view>
+
         </swiper-item>
         <swiper-item class='swiper' class='swiper'>
-          5
+           <view class="section">
+              
+                <label>主诉： </label>
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                       <text>{{wordLength}}/{{xiangqing.we}}</text>
+                       </textarea>
+            </view>
+
+             <view class="section"> 
+                    <label>年龄：</label>  
+                    <input type="text" class="input_view"></input>         
+            </view>
+            <!-- 模型照片、正面照片 -->
+<view class="section">
+                <view class="img-txt">*请分别上传《模型照片、正面照片》</view>
+                <view class="img">
+                    <view class="img-list" wx:for="{{upload_picture_list}}" wx:key="img">
+                        <image bindtap="deleteimg" class="jian" data-index="{{index}}" src="/hyb_yl/images/jian.png"></image>
+                        <image class="border" src="{{item.path}}"></image>
+                        <input name="fujian{{index}}" style="display:none;" value="{{thumb}}"></input>
+                    </view>
+                    <image bindtap="uploadpic" class="tianjia {{hide?'hide':'show'}}" src="/hyb_yl/images/tjimg.png"></image>
+                </view>
+           </view>
+
+
         </swiper-item>
       </swiper>
 

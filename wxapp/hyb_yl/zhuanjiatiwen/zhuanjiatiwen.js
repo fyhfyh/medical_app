@@ -26,10 +26,28 @@ Page({
         doctor_openid: "",
         tishiindex: 0,
         uniacid: 0,
-        upload_picture_list: ""
+        upload_picture_list: "",
+        sex:[
+          {value:'boy',name:'男', checked:true},
+          {value:'gril',name:'女'}
+        ],
     }, _defineProperty(_data, "imgs", []), _defineProperty(_data, "upload_picture_list", []), 
     _data),
     
+    //单选 性别
+  radioChange(e) {
+    console.log('radio发生change事件，携带value值为：', e.detail.value)
+
+    const sex = this.data.sex
+    for (let i = 0, len = sex.length; i < len; ++i) {
+      sex[i].checked = sex[i].value === e.detail.value
+    }
+
+    this.setData({
+      sex
+    })
+  },
+
     // //swiper切换时会调用
     pagechange: function (e) {
       if ("touch" === e.detail.source) {
