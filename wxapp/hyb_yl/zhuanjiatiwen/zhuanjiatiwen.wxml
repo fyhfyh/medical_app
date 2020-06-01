@@ -74,7 +74,7 @@
             <view class="section">
               
                 <label>主诉： </label>
-                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" value="{{textarea}}" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
                        <text>{{wordLength}}/{{xiangqing.we}}</text>
                        </textarea>
             </view>
@@ -89,11 +89,11 @@
             </view>
             <view class="section"> 
                     <label>年龄：</label>  
-                    <input type="text" class="input_view"></input>         
+                    <input type="text" class="input_view" value="{{age}}" bindinput="age"></input>         
             </view>
                <view class="section"> 
                     <label>患者病史：</label>  
-                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="bingshi" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                   <textarea bindinput="computing_word2" maxlength="{{xiangqing.we}}" name="bingshi" value="{{textarea2}}" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
                     <text>{{wordLength}}/{{xiangqing.we}}</text>
                 </textarea>      
             </view>
@@ -114,7 +114,7 @@
              <view class="section">
               
                 <label>主诉： </label>
-                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" value="{{textarea}}" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
                        <text>{{wordLength}}/{{xiangqing.we}}</text>
                        </textarea>
             </view>
@@ -129,11 +129,11 @@
             </view>
             <view class="section"> 
                     <label>年龄：</label>  
-                    <input type="text" class="input_view"></input>         
+                    <input type="text" class="input_view" value="{{age}}" bindinput="age"></input>         
             </view>
                <view class="section"> 
                     <label>患者病史：</label>  
-                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="bingshi" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                   <textarea bindinput="computing_word2" maxlength="{{xiangqing.we}}" name="bingshi" value="{{textarea2}}" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
                     <text>{{wordLength}}/{{xiangqing.we}}</text>
                 </textarea>      
             </view>
@@ -155,7 +155,7 @@
              <view class="section">
               
                 <label>主诉： </label>
-                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" value="{{textarea}}" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
                        <text>{{wordLength}}/{{xiangqing.we}}</text>
                        </textarea>
             </view>
@@ -170,18 +170,18 @@
             </view>
             <view class="section"> 
                     <label>年龄：</label>  
-                    <input type="text" class="input_view"></input>         
+                    <input type="text" class="input_view" value="{{age}}" bindinput="age"></input>        
             </view>
                <view class="section"> 
                     <label>患者病史：</label>  
-                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="bingshi" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                   <textarea bindinput="computing_word2" maxlength="{{xiangqing.we}}" name="bingshi" value="{{textarea2}}" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
                     <text>{{wordLength}}/{{xiangqing.we}}</text>
                 </textarea>      
             </view>
 
             <view class="section"> 
                     <label>初步诊断：</label>  
-                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="cbzd" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                   <textarea bindinput="computing_word3" maxlength="{{xiangqing.we}}" name="cbzd" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
                     <text>{{wordLength}}/{{xiangqing.we}}</text>
                 </textarea>      
             </view>
@@ -202,7 +202,7 @@
                <view class="section">
               
                 <label>主诉： </label>
-                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" value="{{textarea}}" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
                        <text>{{wordLength}}/{{xiangqing.we}}</text>
                        </textarea>
             </view>
@@ -217,11 +217,11 @@
             </view>
             <view class="section"> 
                     <label>年龄：</label>  
-                    <input type="text" class="input_view"></input>         
+                    <input type="text" class="input_view" value="{{age}}" bindinput="age"></input>         
             </view>
                <view class="section"> 
                     <label>患者病史：</label>  
-                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="bingshi" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                   <textarea bindinput="computing_word2" maxlength="{{xiangqing.we}}" name="bingshi" value="{{textarea2}}" placeholder="请仔细填写患者病史" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
                     <text>{{wordLength}}/{{xiangqing.we}}</text>
                 </textarea>      
             </view>
@@ -244,14 +244,14 @@
            <view class="section">
               
                 <label>主诉： </label>
-                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" value="{{textarea}}" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
                        <text>{{wordLength}}/{{xiangqing.we}}</text>
                        </textarea>
             </view>
 
              <view class="section"> 
                     <label>年龄：</label>  
-                    <input type="text" class="input_view"></input>         
+                    <input type="text" class="input_view" value="{{age}}" bindinput="age"></input>        
             </view>
             <!-- 模型照片、正面照片 -->
 <view class="section">

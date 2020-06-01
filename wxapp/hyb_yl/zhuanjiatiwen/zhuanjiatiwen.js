@@ -14,6 +14,7 @@ var app = getApp();
 Page({
     data: (_data = {
         currentIndex: 0,//tab
+        imgcount: 15,
         guanzhu: !0,
         wordLength: 0,
         imgs: [],
@@ -22,6 +23,9 @@ Page({
         toastHidden3: !0,
         toastHidden4: !1,
         textarea: "",
+        age: "",
+        textarea2:"",
+        textarea3: "",
         tw_money: "",
         doctor_openid: "",
         tishiindex: 0,
@@ -48,6 +52,12 @@ Page({
     })
   },
 
+  age: function (t) {
+   this.setData({
+      age: t.detail.value
+    });
+  },
+
     // //swiper切换时会调用
     pagechange: function (e) {
       if ("touch" === e.detail.source) {
@@ -55,15 +65,61 @@ Page({
         this.setData({
           currentIndex: currentPageIndex
         })
+        //清除数据
+        this.setData({
+          upload_picture_list: [],
+          hide: !1,
+          textarea:'',
+          textarea2: '',
+          textarea3: '',
+          age: '',
+        })
+        if (currentPageIndex==0){
+          this.setData({
+            imgcount: 15
+          })
+        } else if (currentPageIndex == 1 || currentPageIndex == 2 || currentPageIndex == 3){
+          this.setData({
+            imgcount: 1
+          })
+        }
+        else{
+          this.setData({
+            imgcount: 2
+          })
+        }
       }
     },
     //用户点击tab时调用
     titleClick: function (e) {
-      let currentPageIndex =
+      let currentPageIndex = e.currentTarget.dataset.idx
         this.setData({
           //拿到当前索引并动态改变
           currentIndex: e.currentTarget.dataset.idx
         })
+        //清除数据
+        this.setData({
+          upload_picture_list: [],
+          hide: !1,
+          textarea: '',
+          textarea2: '',
+          textarea3: '',
+          age: '',
+        })
+         if (currentPageIndex==0){
+          this.setData({
+            imgcount: 15
+          })
+        } else if (currentPageIndex == 1 || currentPageIndex == 2 || currentPageIndex == 3){
+          this.setData({
+            imgcount: 1
+          })
+        }
+        else{
+          this.setData({
+            imgcount: 2
+          })
+        }
     },
     tishi: function() {
         var t = this.data.imgs;
@@ -83,10 +139,23 @@ Page({
             textarea: t.detail.value
         });
     },
+  computing_word2: function (t) {
+    console.log(t.detail.value), this.setData({
+      wordLength: t.detail.value.length,
+      textarea2: t.detail.value
+    });
+  },
+  computing_word3: function (t) {
+    console.log(t.detail.value), this.setData({
+      wordLength: t.detail.value.length,
+      textarea3: t.detail.value
+    });
+  },
     uploadImage: function() {
+        var imgcount = this.data.imgcount;
         var e = this, a = e.data.imgs;
         wx.chooseImage({
-            count: 15,
+          count: imgcount,
             sizeType: [ "original", "compressed" ],
             sourceType: [ "album", "camera" ],
             success: function(t) {
@@ -102,6 +171,7 @@ Page({
         var t = this, o = this.data.tishiindex, i = this.data.textarea, n = (this.data.imgs, 
         this.data.tw_money), s = wx.getStorageSync("openid"), d = t.data.doctor_openid, c = t.data.p_id, l = e.detail.value.q_dname, u = e.detail.value.q_zhiwei, r = e.detail.value.q_docthumb, p = t.data.userInfo.nickName, g = t.data.userInfo.avatarUrl, h = (e.detail.value, 
         t.data.zid), _ = t.data.q_category;
+      console.log(i)
         if (f = t.data.doctor_openid) f = t.data.doctor_openid; else var f = createNonceStr;
         if ("" == e.detail.value.tiwen) wx.showModal({
             title: "",
@@ -461,8 +531,9 @@ Page({
                 });
             });
         }
+      var imgcount = this.data.imgcount;
         console.log(e), wx.chooseImage({
-            count: 15,
+          count: imgcount,
             sizeType: [ "original", "compressed" ],
             sourceType: [ "album", "camera" ],
             success: function(t) {
@@ -470,7 +541,7 @@ Page({
                 for (var a in e) e[a].upload_percent = 0, e[a].path_server = "", n.push(e[a]);
                 for (var o in i.setData({
                     upload_picture_list: n
-                }), 15 == n.length && i.setData({
+                }), imgcount == n.length && i.setData({
                     hide: !0
                 }), n) 0 == n[o].upload_percent && s(i, n, o);
             }
