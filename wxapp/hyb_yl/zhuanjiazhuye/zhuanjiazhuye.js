@@ -182,7 +182,7 @@ Page({
         return a;
     },
     onLoad: function(t) {
-        wx.hideNavigationBarLoading();
+        // wx.hideNavigationBarLoading();
         var a = wx.getStorageSync("color");
         wx.setNavigationBarColor({
             frontColor: "#ffffff",
@@ -558,11 +558,11 @@ Page({
         });
     },
     onReady: function() {
-        this.getBase(), wx.hideNavigationBarLoading();
+        this.getBase();
     },
     onShow: function(t) {
         var a = this, e = a.data.zid, n = setInterval(function() {
-            a.renshu(e), wx.hideNavigationBarLoading();
+            a.renshu(e);
         }, 1e3);
         a.setData({
             timer: n

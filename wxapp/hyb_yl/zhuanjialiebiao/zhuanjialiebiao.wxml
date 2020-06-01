@@ -72,7 +72,7 @@
                                 <text class="btn posi">电话咨询</text>
                             </view>
                             <view wx:else>
-                                <text class="btn1 posi">暂未开通</text>
+                                <!-- <text class="btn1 posi">暂未开通</text> -->
                             </view>
                         </view>
                         <view style="display:flex;">
@@ -91,32 +91,7 @@
         <text>{{bq_name}}</text>
     </view>
     <view class="pb116"></view>
-    <view class="footer">
-        <view>
-            <navigator hoverClass="none" openType="redirect" url="/hyb_yl/index/index">
-                <image src="/hyb_yl/images/tab01.png"></image>
-                <text>首页</text>
-            </navigator>
-        </view>
-        <view>
-            <navigator hoverClass="none" openType="redirect" url="/hyb_yl/zhuanjialiebiao/zhuanjialiebiao">
-                <image src="/hyb_yl/images/tab2.png"></image>
-                <text style="color:#06AC85;">资讯</text>
-            </navigator>
-        </view>
-        <view>
-            <navigator hoverClass="none" openType="redirect" url="/hyb_yl/faxian/faxian">
-                <image src="/hyb_yl/images/tab03.png"></image>
-                <text>发现</text>
-            </navigator>
-        </view>
-        <view>
-            <navigator hoverClass="none" openType="redirect" url="/hyb_yl/my/my">
-                <image src="/hyb_yl/images/tab04.png"></image>
-                <text>我的</text>
-            </navigator>
-        </view>
-    </view>
+  
     <view bindtap="hideClick" class="mask" wx:if="{{overflow}}"></view>
     <view class="zixun bdr20 bsbb pl15 pr15" wx:if="{{overflow}}">
         <view class="h88 df jcsb bdb2" wx:if="{{item.url!==''&&item.url!==''}}" wx:for="{{xiangqing.url}}" wx:key="key">
