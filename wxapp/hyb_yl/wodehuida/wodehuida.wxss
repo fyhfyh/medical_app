@@ -276,3 +276,17 @@ button[plain] {
 .mr27:nth-child(3n) {
     margin-right: 0;
 }
+
+.btn {
+    padding: 3rpx 10rpx 5rpx;
+    background: #06AC85;
+    color: #fff;
+    font-size: 22rpx;
+    margin-right: 133rpx;
+
+}
+/* .posi {
+    position: absolute;
+    left: 83%;
+    top: 45%;
+} */

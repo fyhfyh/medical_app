@@ -31,9 +31,10 @@ Page({
         tishiindex: 0,
         uniacid: 0,
         upload_picture_list: "",
+        sexvalue:"1",
         sex:[
-          {value:'boy',name:'男', checked:true},
-          {value:'gril',name:'女'}
+          {value:'1',name:'男',checked:true},
+          {value:'2',name:'女'}
         ],
     }, _defineProperty(_data, "imgs", []), _defineProperty(_data, "upload_picture_list", []), 
     _data),
@@ -48,7 +49,7 @@ Page({
     }
 
     this.setData({
-      sex
+      sexvalue: e.detail.value
     })
   },
 
@@ -168,10 +169,15 @@ Page({
         });
     },
     formSubmit: function(e) {
-        var t = this, o = this.data.tishiindex, i = this.data.textarea, n = (this.data.imgs, 
+      var t = this, o = this.data.tishiindex, typeid = this.data.currentIndex, sex = this.data.sexvalue, age = this.data.age, textarea2 = this.data.textarea2, textarea3 = this.data.textarea3, i = this.data.textarea, n = (this.data.imgs, 
         this.data.tw_money), s = wx.getStorageSync("openid"), d = t.data.doctor_openid, c = t.data.p_id, l = e.detail.value.q_dname, u = e.detail.value.q_zhiwei, r = e.detail.value.q_docthumb, p = t.data.userInfo.nickName, g = t.data.userInfo.avatarUrl, h = (e.detail.value, 
         t.data.zid), _ = t.data.q_category;
-      console.log(i)
+        if (this.data.hide == false){wx.showModal({
+          title: "",
+          content: "请上传完整图片"
+        });
+        return false;
+      } 
         if (f = t.data.doctor_openid) f = t.data.doctor_openid; else var f = createNonceStr;
         if ("" == e.detail.value.tiwen) wx.showModal({
             title: "",
@@ -210,7 +216,7 @@ Page({
                                         q_username: p,
                                         q_thumb: g,
                                         q_docthumb: r,
-                                        q_zhiwei: u,
+                                        q_zhiwei: u,  
                                         q_dname: l,
                                         h_pic: 1,
                                         pay: n,
@@ -218,7 +224,12 @@ Page({
                                         name: l,
                                         zid: h,
                                         q_category: _,
-                                        fromuser: f
+                                        fromuser: f,
+                                        typeid:typeid,
+                                        sex:sex,
+                                        age: age,
+                                        textarea2: textarea2,
+                                        textarea3: textarea3,
                                     },
                                     header: {
                                         "content-type": "application/json"
@@ -301,7 +312,12 @@ Page({
                                                             name: l,
                                                             zid: h,
                                                             q_category: _,
-                                                            fromuser: f
+                                                            fromuser: f,
+                                                            typeid: typeid,
+                                                            sex: sex,
+                                                            age: age,
+                                                            textarea2: textarea2,
+                                                            textarea3: textarea3,
                                                         },
                                                         header: {
                                                             "content-type": "application/json"

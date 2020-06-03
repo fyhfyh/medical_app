@@ -117,7 +117,7 @@ page {
 }
 
 .mr27 {
-    margin-right: 27rpx;
+    margin-right: 88rpx;
 }
 
 .mr27:nth-child(3n) {
