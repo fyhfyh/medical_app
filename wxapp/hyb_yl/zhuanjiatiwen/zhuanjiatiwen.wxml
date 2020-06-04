@@ -82,7 +82,7 @@
                    <label>性别：</label>
                       <radio-group bindchange="radioChange">
                          <view class="radio-view" wx:for="{{sex}}" wx:key="{{item.value}}">
-                            <radio value="{{item.value}}" class="radio-view" checked="true" color="#06AC85"/>
+                            <radio value="{{item.value}}"  class="radio-view"  color="#06AC85"/>
                                <view class="radio-view">{{item.name}}</view>
                            </view>
                       </radio-group>            
@@ -122,7 +122,7 @@
                    <label>性别：</label>
                       <radio-group bindchange="radioChange">
                          <view class="radio-view" wx:for="{{sex}}" wx:key="{{item.value}}">
-                            <radio value="{{item.value}}" class="radio-view" checked="true" color="#06AC85"/>
+                            <radio value="{{item.value}}" class="radio-view"  color="#06AC85"/>
                                <view class="radio-view">{{item.name}}</view>
                            </view>
                       </radio-group>            
@@ -163,7 +163,7 @@
                    <label>性别：</label>
                       <radio-group bindchange="radioChange">
                          <view class="radio-view" wx:for="{{sex}}" wx:key="{{item.value}}">
-                            <radio value="{{item.value}}" class="radio-view" checked="true" color="#06AC85"/>
+                            <radio value="{{item.value}}" class="radio-view"  color="#06AC85"/>
                                <view class="radio-view">{{item.name}}</view>
                            </view>
                       </radio-group>            
@@ -210,7 +210,7 @@
                    <label>性别：</label>
                       <radio-group bindchange="radioChange">
                          <view class="radio-view" wx:for="{{sex}}" wx:key="{{item.value}}">
-                            <radio value="{{item.value}}" class="radio-view" checked="true" color="#06AC85"/>
+                            <radio value="{{item.value}}" class="radio-view"  color="#06AC85"/>
                                <view class="radio-view">{{item.name}}</view>
                            </view>
                       </radio-group>            

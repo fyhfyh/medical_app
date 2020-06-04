@@ -11,7 +11,7 @@
                     <view class="fs24 c6">{{qs.state}}</view>
                     <view class="fs26 c6 lh15">{{qs.question}}</view>
                     <view class="df fww mt20">
-                        <image bindtap="yulan" class="mb10 mr27" data-idx="{{index}}" data-index="{{idxs}}" mode="widthFix" src="{{item}}" style="width:100%" wx:for="{{qs.user_picture}}" wx:key="key"></image>
+                        <image bindtap="yulan" class="mb10 mr27" data-idx="{{index}}" data-index="{{idxs}}" mode="widthFix" src="{{item}}" style="width:22%" wx:for="{{qs.user_picture}}" wx:key="key"></image>
                     </view>
                     <view class="fs26 c9 mt10 df jcsb">
                         <view>

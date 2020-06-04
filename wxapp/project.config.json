@@ -104,6 +104,13 @@
 					"pathName": "hyb_yl/atabs/tabs",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "hyb_yl/wodehuida/wodehuida",
+					"pathName": "hyb_yl/wodehuida/wodehuida",
+					"query": "zid=32",
+					"scene": null
 				}
 			]
 		}
