@@ -8,7 +8,8 @@ App({
     },
     globalData: {
         userInfo: null,
-        bg: ""
+        bg: "",
+        ge:0
     },
     util: require("we7/resource/js/util.js"),
     siteInfo: require("siteinfo.js")

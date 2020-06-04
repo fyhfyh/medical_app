@@ -90,7 +90,10 @@ page {
     height: 43rpx;
     padding: 10rpx 15rpx;
     background-color: #1bd9ac;
-    border-radius: 50rpx 0 0 50rpx;
+    position: relative;
+    margin-bottom: -125rpx;
+    margin-right: -45rpx;
+    left: -60rpx;
 }
 
 .qhtab {

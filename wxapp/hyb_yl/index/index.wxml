@@ -64,8 +64,8 @@
             <block wx:for="{{serve}}" wx:key="serve">
                 <view class="serve-top">
                     <view class="serve-title">{{item.name}}</view>
-                    <view class="serve-notice" wx:if="{{selectord==false}}">最新预约：暂无预约</view>
-                    <view class="serve-notice" wx:else>最新预约：{{selectord.myname}}</view>
+                    <!-- <view class="serve-notice" wx:if="{{selectord==false}}">最新预约：暂无预约</view>
+                    <view class="serve-notice" wx:else>最新预约：{{selectord.myname}}</view> -->
                 </view>
                 <view class="serve-bottom">
                     <view class="serve-left" wx:for="{{myser}}" wx:key="unique">
@@ -329,6 +329,15 @@
                 <button bindgetuserinfo="bindGetUserInfo" formType="submit" hoverClass="none" lang="zh_CN" openType="getUserInfo">同意</button>
             </view>
         </view>
+             <view class="mask" wx:if="{{showGetTel}}">
+            <view class="shouquan">
+                <view class="shouquan-img">
+                    <image mode="widthFix" src="../images/shouquan.png"></image>
+                </view>
+                <view class="shouquan-con">登录成功</view>
+                <button bindgetphonenumber="getPhoneNumber" formType="submit" hoverClass="none" lang="zh_CN" openType="getPhoneNumber">确认</button>
+            </view>
+        </view>
         <view class="bq">
             <text>版权所有</text>
             <image src="{{bq_thumb}}"></image>
@@ -342,11 +351,11 @@
             </view>
             <view bindtap="toast1">
                 <image src="/hyb_yl/images/tab02.png"></image>
-                <text>资讯</text>
+                <text>专家</text>
             </view>
             <view bindtap="toast2">
                 <image src="/hyb_yl/images/tab03.png"></image>
-                <text>发现</text>
+                <text>提问</text>
             </view>
             <view bindtap="toast3">
                 <image src="/hyb_yl/images/tab04.png"></image>

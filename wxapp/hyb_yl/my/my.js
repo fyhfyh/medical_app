@@ -6,7 +6,7 @@ Page({
         zhiwuss: [],
         zhiwu: [],
         userInfo: {},
-        qhtab: [ "个人", "专家" ],
+        qhtab: [ "医生", "专家" ],
         current: 0,
         touxiang: !0,
         touxiangurl: "",
@@ -25,13 +25,14 @@ Page({
         upload_picture_list: [],
         date: "",
         uplogo: "",
-        ge: 0,
+        ge:0,
         nav: {
-            nav_list: [ {
-                img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/yuyue.png",
-                con: "我的预约",
-                btn: "yuyueClick"
-            }, 
+            nav_list: [ 
+            //   {
+            //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/yuyue.png",
+            //     con: "我的预约",
+            //     btn: "yuyueClick"
+            // }, 
             // {
             //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/dingdan.png",
             //     con: "我的课程",
@@ -49,15 +50,23 @@ Page({
             currentTab: 0
         },
         nav1: {
-            nav_list: [ {
-                img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/yuyue.png",
-                con: "患者预约",
-                btn: "huanClick"
-            }, {
-                img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/dingdan.png",
-                con: "我的处方",
-                btn: "chufang"
-            }, {
+            nav_list: [ 
+            //   {
+            //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/yuyue.png",
+            //     con: "患者预约",
+            //     btn: "huanClick"
+            // },
+              {
+                img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/tiwen.png",
+                con: "我的提问",
+                btn: "tiwenClick"
+              },
+            //  {
+            //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/dingdan.png",
+            //     con: "我的处方",
+            //     btn: "chufang"
+            // }, 
+            {
                 img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/tiwen.png",
                 con: "我的回答",
                 btn: "daClick"
@@ -85,11 +94,12 @@ Page({
         //     con: "我的处方",
         //     btn: "Mykchufang"
         // }, 
+        // {
+        //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.8.png",
+        //     con: "绑定手机",
+        //     btn: "phoneClick"
+        // }, 
         {
-            img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.8.png",
-            con: "绑定手机",
-            btn: "phoneClick"
-        }, {
             img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.11.png",
             con: "编辑资料",
             btn: "dataClick"
@@ -101,15 +111,11 @@ Page({
             img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/tcdd.png",
             con: "服务订单",
             btn: "fuwuorder"
-        }, {
-            img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/微信图片_20180806101701.png",
-            con: "我的理赔",
-            btn: "lipeiClick"
         }, 
         // {
-        //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.9.png",
-        //     con: "健康档案",
-        //     btn: "huanListClick"
+        //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/微信图片_20180806101701.png",
+        //     con: "我的理赔",
+        //     btn: "lipeiClick"
         // }, 
         // {
         //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.6.png",
@@ -126,11 +132,13 @@ Page({
             img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/1.5.png",
             con: "问题金额设置",
             btn: "zhuanWenClick"
-        }, {
-            img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.9.png",
-            con: "扫码核销",
-            btn: "erClick"
-        }, {
+        },
+        //  {
+        //     img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.9.png",
+        //     con: "扫码核销",
+        //     btn: "erClick"
+        // }, 
+        {
             img: "https://lg-o8nytxik-1257013711.cos.ap-shanghai.myqcloud.com/2.2.png",
             con: "我的聊天",
             btn: "liaoClick"
@@ -224,6 +232,11 @@ Page({
             url: "/hyb_yl/xinzengyiliao/xinzengyiliao?fuwu_name=健康档案"
         });
     },
+    apply_zj:function(){
+      wx.navigateTo({
+        url: "/hyb_yl/xinzengyiliao/xinzengyiliao?fuwu_name=健康档案"
+      });
+    },
     tiClick: function(a) {
         var t = a.currentTarget.dataset.docmoney;
         wx.navigateTo({
@@ -302,7 +315,7 @@ Page({
             hide: !1
         });
     },
-    qhtab: function(n) {
+    qhtab(n) {
         var i = this, a = wx.getStorageSync("openid"), o = i.data.zj;
         app.util.request({
             url: "entry/wxapp/Zhuanjsh",
@@ -413,15 +426,19 @@ Page({
         });
     },
     onLoad: function(a) {
+      
         var t = wx.getStorageSync("color");
         wx.setNavigationBarColor({
             frontColor: "#ffffff",
             backgroundColor: t
         });
         var o = this;
+
+         
         o.setData({
+            ge: wx.getStorageSync('ge'),
             backgroundColor: t,
-            myphone: app.globalData.myphone
+            myphone: wx.getStorageSync('telephone')
         }), app.util.request({
             url: "entry/wxapp/Ifent",
             success: function(a) {
@@ -432,7 +449,8 @@ Page({
             fail: function(a) {
                 console.log(a);
             }
-        });
+        }),
+    
         app.siteInfo.uniacid;
         app.util.request({
             url: "entry/wxapp/url",
@@ -516,6 +534,7 @@ Page({
                 console.log(a);
             }
         });
+        
     },
     replace: function() {
         var n = this, i = app.siteInfo.uniacid, o = (n.data.zhuanjiaImg, wx.getStorageSync("openid"));
@@ -568,6 +587,7 @@ Page({
     onHide: function() {},
     onUnload: function() {},
     onPullDownRefresh: function() {
+        var that = this;
         var a = wx.getStorageSync("color");
         wx.setNavigationBarColor({
             frontColor: "#ffffff",
@@ -576,6 +596,21 @@ Page({
         setTimeout(function() {
             wx.stopPullDownRefresh(), wx.hideNavigationBarLoading();
         }, 1e3);
+        app.util.request({
+          url:'entry/wxapp/Getshenfen',
+          data:{
+            openid:wx.getStorageSync('openid'),
+            telephone: wx.getStorageSync('telephone')
+          },
+          success:function(e){
+            wx.setStorageSync('ge', e.data.data.ge);
+            that.setData({
+              ge: e.data.data.ge
+            })
+          }
+        });
+
+      
     },
     onReachBottom: function() {},
     getMyxfjl: function() {

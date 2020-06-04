@@ -1,5 +1,4 @@
 var _Page;
-
 function _defineProperty(e, t, a) {
     return t in e ? Object.defineProperty(e, t, {
         value: a,
@@ -32,7 +31,8 @@ Page((_defineProperty(_Page = {
         array1: [],
         footer: [],
         ps: !0,
-        a: !1
+        a: !1,
+        showGetTel:false
     },
     saveFormId: function(e) {
         var t = e.detail.formId, a = wx.getStorageSync("openid"), i = e.detail.value.id, n = e.detail.value.u_id;
@@ -256,6 +256,7 @@ Page((_defineProperty(_Page = {
         });
     },
     bindGetUserInfo: function(a) {
+        var that = this;
         console.log(a);
         var e = a.detail.userInfo;
         a.detail.formId;
@@ -280,6 +281,7 @@ Page((_defineProperty(_Page = {
                                 },
                                 success: function(e) {
                                     wx.getStorageSync("openid");
+                                    that.setData({showGetTel:true})
                                 }
                             });
                         }
@@ -297,18 +299,72 @@ Page((_defineProperty(_Page = {
             userInfo: e
         });
     },
+    getPhoneNumber(e) {
+      
+      var that = this;
+      if (!wx.getStorageSync('telephone') || wx.getStorageSync('telephone') == ''){
+           wx.login({
+              success(res){
+                if(res.code){
+                  app.util.request({
+                    url: "entry/wxapp/CryptTel",
+                    data:{
+                      code:res.code,
+                      iv:e.detail.iv,
+                      encryptedData: e.detail.encryptedData
+                    },
+                    success: function (resp) {
+                      if (resp.data.message == 'success'){
+                        wx.setStorageSync('telephone', resp.data.data.tel.phoneNumber);
+                        that.setData({ telephone: resp.data.data.tel.phoneNumber });
+                        that.setData({ showGetTel: false })
+                        console.log(resp.data.data)
+                        app.globalData.ge = resp.data.data.type;
+                        wx.setStorageSync('ge', resp.data.data.type);
+                        //修改填充手机号
+                        app.util.request({
+                          url:"entry/wxapp/Savemyphone",
+                          data:{
+                            uniacid:'2',
+                            openid:resp.data.data.openid,
+                            u_phone:wx.getStorageSync('telephone')
+                          },
+                          success:function(ee){
+                            
+                            console.log(ee)
+                          }
+                        });
+
+                      }
+                  
+                      
+                    }
+                  })
+                
+              }else{
+                  console.log('获取手机号失败' + res.errMsg);
+              }
+           
+           }
+           })
+      }
+     
+    },
     onLoad: function(e) {
         var t = this;
         wx.showLoading({
             title: "加载中"
         });
         var a = wx.getStorageSync("userInfo");
+        var telephone = wx.getStorageSync('telephone');
         app.util.request({
             url: "entry/wxapp/Selectord3",
             success: function(e) {
                 t.setData({
-                    selectord: e.data.data
+                    selectord: e.data.data,
+                    telephone:telephone
                 });
+              
             }
         }), t.setData({
             userInfo: a
@@ -321,7 +377,7 @@ Page((_defineProperty(_Page = {
     },
     toast1: function(e) {
         wx.redirectTo({
-          url: "/hyb_yl/jibingyufang/jibingyufang"
+          url: "/hyb_yl/zhuanjialiebiao/zhuanjialiebiao"
         });
     },
     toast2: function() {
