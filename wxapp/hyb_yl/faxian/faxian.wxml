@@ -11,7 +11,7 @@
 </view>
 <view class="nav">
     <scroll-view class="bgcf" scrollX="true" style="white-space:nowrap;box-sizing:border-box;padding-left:15rpx;padding-right:15rpx;">
-        <view bindtap="navbar" class="h fs28 bsbb {{current==0?'c bdb2':'c6'}}" data-index="{{0}}">
+        <view bindtap="navbar" class="h fs28 bsbb {{current==0?'c bdb2':'c6'}}" data-id="0" data-index="{{0}}" >
             <text>全部</text>
         </view>
         <view bindtap="navbar" class="h fs28 bsbb {{current==index+1?'c bdb2':'c6'}}" data-id="{{item.id}}" data-index="{{index+1}}" wx:for="{{questionimg}}" wx:key="nav">
@@ -23,7 +23,7 @@
     <view class="questions-title">专业问答</view>
     <block wx:if="{{qusetiontype.length!=0}}">
         <view bindtap="zhuanLiaoClick" class="df fdc bsbb p30" data-fromuser="{{item.fromuser}}" data-money="{{item.gbmoney}}" data-openid="{{item.user_openid}}" data-qid="{{item.qid}}" data-z_name="{{item.z_name}}" data-z_thumbs="{{item.z_thumbs}}" data-z_zhiwu="{{item.z_zhiwu}}" data-zid="{{item.p_id}}" wx:for="{{qusetiontype}}" wx:key="key">
-            <view class="fs26 c9">患者提问</view>
+            <view class="fs26 c9">医生提问</view>
             <view class="fs30 c6 mt20 text-over2">{{item.question}}</view>
             <view class="df aic jcsb mt20">
                 <view class="df aic w60">
@@ -31,7 +31,7 @@
                         <image mode="aspectFill" src="{{item.z_thumbs}}" style="width:88rpx;height:88rpx;"></image>
                     </view>
                     <view class="ml30 df aic jcsb bgc cf w60 bsbb pl30 pr30 h72 bdr20">
-                        <image mode="widthFix" src="../images/wift.png" style="width:21rpx;"></image>
+                        <!-- <image mode="widthFix" src="../images/wift.png" style="width:21rpx;"></image> -->
                         <text class="fs28" wx:if="{{item.gbmoney!=='0.00'||item.gbmoney==null}}">￥{{item.gbmoney}}看答案</text>
                         <text class="fs28" wx:else>免费看答案</text>
                     </view>

@@ -56,12 +56,12 @@ page {
 
 .liao {
     max-width: 62%;
-    border-radius: 0 50rpx 50rpx 50rpx;
+    border-radius: 50rpx 50rpx 50rpx 50rpx;
 }
 
 .liao1 {
     max-width: 62%;
-    border-radius: 50rpx 0 50rpx 50rpx;
+    border-radius: 50rpx 50rpx 50rpx 50rpx;
 }
 
 ::-webkit-scrollbar {

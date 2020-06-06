@@ -152,6 +152,21 @@ Page((_defineProperty(_Page = {
                 q_docthumb: o
             },
             success: function(e) {
+              wx.showToast({
+                title: '发送成功',
+                icon: 'success',
+                duration: 2000,
+                success:function(){
+                  setTimeout(function () {
+                    wx.reLaunch({
+                      url: '/hyb_yl/wodehuida/wodehuida',
+                    })
+                  }, 2000);
+
+                }
+                
+              });
+          
                 console.log(e);
             }
         });

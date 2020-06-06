@@ -360,8 +360,6 @@ Page({
             content: "姓名和手机号不能为空"
         }), !1) : 0 == t.detail.value.z_yiyuan.length ? (wx.showModal({
             content: "请填写所在医院"
-        }), !1) : 0 == t.detail.value.pid.length ? (wx.showModal({
-            content: "请选择二级科室"
         }), !1) : void wx.showModal({
             title: "提示",
             content: " 确认提交么？ ",

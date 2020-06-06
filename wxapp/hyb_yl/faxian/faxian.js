@@ -123,9 +123,9 @@ Page({
         e.setData({
             current: t.currentTarget.dataset.index
         }), app.util.request({
-            url: "entry/wxapp/Questionimgsingle",
+          url: "entry/wxapp/QusetionSettype",
             data: {
-                id: a
+                type_id: a
             },
             success: function(t) {
                 console.log(t);
@@ -203,11 +203,13 @@ Page({
     onShareAppMessage: function() {},
     getAllquestions: function(t) {
         console.log(t);
+
         var o = this;
         app.util.request({
             url: "entry/wxapp/Qusetiontype",
             data: {
-                page: t
+                page: t,
+              
             },
             success: function(t) {
                 console.log(t), t.data.data.length < 5 && o.setData({

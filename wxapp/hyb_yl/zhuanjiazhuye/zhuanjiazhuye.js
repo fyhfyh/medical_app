@@ -252,7 +252,7 @@ Page({
             success: function(t) {
                 console.log(t), app.globalData.answer = t.data.data, e.setData({
                     allq: t.data.data,
-                    pageWrapCount: e.data.pageWrapCount.concat([ 1 ])
+                  pageWrapCount: e.data.pageWrapCount.concat([ 1 ])
                 }), WxParse.wxParse("article", "html", t.data.data.z_content, e, 5);
             },
             fail: function(t) {

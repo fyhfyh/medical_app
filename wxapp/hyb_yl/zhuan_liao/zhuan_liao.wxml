@@ -29,6 +29,7 @@
                 <view class="mr30 mt44 liao1 bgc6e7d94 cf bsbb pt18 pl40 pr28 fs30 pb18 wbba">
                     <text>{{qs.question}}</text>
                 </view>
+                
             </view>
             <view class="df mb20" wx:if="{{qs.doc}}" wx:for="{{qs.doc}}">
                 <view>
