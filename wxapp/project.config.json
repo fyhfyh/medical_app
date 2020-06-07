@@ -80,10 +80,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 3,
 					"name": "hyb_yl/zhuan_da/zhuan_da",
 					"pathName": "hyb_yl/zhuan_da/zhuan_da",
-					"query": "",
+					"query": "zid=35&user_openid=otwtA5ZN8_WQcFdAaPcKwv8cJBpM&qid=60",
 					"scene": null
 				},
 				{
@@ -97,7 +97,7 @@
 					"id": 5,
 					"name": "hyb_yl/zhuanjiatiwen/zhuanjiatiwen",
 					"pathName": "hyb_yl/zhuanjiatiwen/zhuanjiatiwen",
-					"query": "id=31&openid=otwtA5Yb9kWBviFqE9YHBv19kHcg",
+					"query": "id=35&openid=otwtA5ZN8_WQcFdAaPcKwv8cJBpM",
 					"scene": null
 				},
 				{

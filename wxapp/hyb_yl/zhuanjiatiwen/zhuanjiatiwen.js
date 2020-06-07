@@ -519,7 +519,7 @@ Page({
         var i = this, n = i.data.upload_picture_list, e = i.data.zid;
         function s(a, o, i) {
             var t = app.siteInfo.uniacid, e = a.data.zid;
-            console.log(t);
+            console.log(a);
             var n = wx.getStorageSync("openid");
             console.log("开始上传" + i + "图片到服务器："), console.log(o[i]), wx.uploadFile({
                 url: a.data.url + "app/index.php?i=" + t + "&c=entry&a=wxapp&do=msg_send_imgs&m=hyb_yl",

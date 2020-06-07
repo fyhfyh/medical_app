@@ -169,3 +169,57 @@ page {
 .lh15 {
     line-height: 1.5;
 }
+
+
+
+.img .tianjia {
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 10rpx;
+}
+
+image.show {
+    display: inline-block;
+}
+
+image.hide {
+    display: none;
+}
+
+.img-txt {
+    width: 100%;
+    font-size: 25rpx;
+    color: red;
+}
+
+.img {
+    width: 100%;
+    margin: 20rpx 0;
+}
+
+.img view.img-list {
+    display: inline-block;
+    width: 110rpx;
+    height: 110rpx;
+    margin-right: 10rpx;
+    border-radius: 10rpx;
+    position: relative;
+}
+
+.img view.img-list:nth-child(6) {
+    margin-right: 0;
+}
+
+.img view.img-list image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+
+.img view.img-list image.jian {
+    position: absolute;
+    width: 35rpx;
+    height: 35rpx;
+    top: -15rpx;
+    right: -15rpx;
+}

@@ -50,6 +50,18 @@
     <view class="detail-footer df jcsb bgcf bsbb p24 aic h98 w" wx:if="{{overFlow1}}">
         <input bindinput="inputClick" class="liao-input c6 fs26 bsbb bdr50 pr28 pl28" cursorSpacing="12" focus="{{focus}}" placeholder="想对他说点什么" placeholderClass="c9" value="{{value}}"></input>
         <text bindtap="faClick" class="fa-btn bgc cf fs26 bdr20 tac" data-docopenid="{{openid}}" data-p_id="{{qs.p_id}}" data-q_docthumb="{{qs.q_docthumb}}" data-user="{{qs.user_openid}}" data-z_name="{{qs.q_dname}}" data-z_thumbs="{{qs.q_docthumb}}" data-z_zhiwu="{{qs.q_zhiwei}}">发送</text>
+
+
+
+    <view class="img">
+                    <view class="img-list" wx:for="{{upload_picture_list}}" wx:key="img">
+                        <image bindtap="deleteimg" class="jian" data-index="{{index}}" src="/hyb_yl/images/jian.png"></image>
+                        <image class="border" src="{{item.path}}"></image>
+                        <input name="fujian{{index}}" style="display:none;" value="{{thumb}}"></input>
+                    </view>
+                    <image bindtap="uploadpic" class="tianjia {{hide?'hide':'show'}}" src="/hyb_yl/images/tjimg.png"></image>
+                </view>
+        
     </view>
     <form bindreset="formReset" bindsubmit="confirm">
         <view catchtap="hideClick" class="bsbb pl18 pr18 bgcf bdr20 df aic jcsb h100 mt10" wx:if="{{paySH}}">

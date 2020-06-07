@@ -24,8 +24,67 @@ Page((_defineProperty(_Page = {
             } ],
             currentTab: 0
         },
-        values: ""
+        values: "",
+      upload_picture_list:[],
+      url: 'https://wapp.mjkq29.com/',
+      img: [],
+      
     },
+
+  uploadpic: function (t) {
+    var i = this, n = i.data.upload_picture_list, e = i.data.zid;
+    function s(a, o, i) {
+      var t = app.siteInfo.uniacid, e = a.data.zid;
+      console.log(a);
+      var n = wx.getStorageSync("openid");
+      console.log("开始上传" + i + "图片到服务器："), console.log(o[i]), wx.uploadFile({
+        url: a.data.url + "app/index.php?i=" + t + "&c=entry&a=wxapp&do=msg_send_imgs&m=hyb_yl",
+        filePath: o[i].path,
+        name: "file",
+        formData: {
+          path: "wxchat",
+          openid: n,
+          uniacid: t,
+          i_type: 1,
+          zid: e
+        },
+        success: function (t) {
+          console.log(t);
+          var e = t.data;
+          a.setData({
+            thumb: e,
+            upload_picture_list: o
+          }), console.log("图片上传" + i + "到服务器完成：");
+        }
+      }).onProgressUpdate(function (t) {
+        o[i].upload_percent = t.progress, console.log("第" + i + "个图片上传进度：" + o[i].upload_percent),
+          console.log(o), a.setData({
+            upload_picture_list: o
+          });
+      });
+    }
+    var imgcount = this.data.imgcount;
+    console.log(e), wx.chooseImage({
+      count: imgcount,
+      sizeType: ["original", "compressed"],
+      sourceType: ["album", "camera"],
+      success: function (t) {
+        var e = t.tempFiles;
+        for (var a in e) e[a].upload_percent = 0, e[a].path_server = "", n.push(e[a]);
+        for (var o in i.setData({
+          upload_picture_list: n
+        }), imgcount == n.length && i.setData({
+          hide: !0
+        }), n) 0 == n[o].upload_percent && s(i, n, o);
+      }
+    });
+  },
+  deleteimg: function (t) {
+    var e = t.currentTarget.dataset.index, a = this.data.upload_picture_list;
+    a.splice(e, 1), this.setData({
+      upload_picture_list: a
+    });
+  },
     swichNav: function(e) {
         var t = this.data.nav;
         t.currentTab = e.currentTarget.dataset.current, this.setData({
@@ -140,6 +199,7 @@ Page((_defineProperty(_Page = {
         console.log(a), app.util.request({
             url: "entry/wxapp/Fromque",
             data: {
+                hide: !1,
                 question: n,
                 parentid: i,
                 q_dname: s,

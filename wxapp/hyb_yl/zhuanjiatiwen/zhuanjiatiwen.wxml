@@ -4,24 +4,24 @@
       scroll-top="{{scrollTop}}">
       <!--Tab布局-->
       <view class='title'>
-        <view class="{{1 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='1'>
+        <view class="{{0 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='0'>
           <text>正畸</text>
           <hr class="line-style"/>
         </view>
         
-        <view class="{{2 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='2'>
+        <view class="{{1 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='1'>
           <text>颌面外科</text>
           <hr class="line-style"/>
         </view>
-        <view class="{{3 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='3'>
+        <view class="{{2 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='2'>
           <text>根管治疗</text>
           <hr class="line-style" />
         </view>
-        <view class="{{4 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='4'>
+        <view class="{{3 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='3'>
           <text>种植</text>
           <hr class="line-style" />
         </view>
-         <view class="{{5 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='5'>
+         <view class="{{4 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='4'>
           <text>美学修复</text>
           <hr class="line-style" />
         </view>
