@@ -101,9 +101,8 @@ Page((_defineProperty(_Page = {
         });
     },
     yulan: function(e) {
-        console.log(e);
-        var t = e.target.dataset.index, a = (e.currentTarget.dataset.idx, this.data.qs);
-        console.log(a);
+      console.log(e)
+        var t = e.target.dataset.idx, a = (e.currentTarget.dataset.idx, this.data.qs);
         var n = a.user_picture[t], i = a.user_picture;
         wx.previewImage({
             current: n,
