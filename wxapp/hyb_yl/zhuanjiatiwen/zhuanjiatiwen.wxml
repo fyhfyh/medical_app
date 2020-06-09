@@ -44,7 +44,7 @@
             <text>{{xiangqing.z_yy_fens}}</text>人</view>
                     <view class="doctor-num-xian"></view>
                     <view>帮助
-            <text>0</text>次</view>
+            <text>{{xiangqing.helpnum}}</text>次</view>
                 </view>
                 <view class="doctor-jgz">
                     <view>

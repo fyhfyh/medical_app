@@ -102,7 +102,7 @@
         </navigator>
     </view>
     <view>
-        <navigator hoverClass="none" openType="redirect" url="hyb_yl/zhuanjialiebiao/zhuanjialiebiao">
+        <navigator hoverClass="none" openType="redirect" url="/hyb_yl/zhuanjialiebiao/zhuanjialiebiao">
             <image src="/hyb_yl/images/tab02.png"></image>
             <text>专家</text>
         </navigator>

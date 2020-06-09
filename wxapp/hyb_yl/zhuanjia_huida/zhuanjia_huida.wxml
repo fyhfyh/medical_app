@@ -1,0 +1,37 @@
+
+    <view class="form">
+        <form bindreset="formReset" bindsubmit="formSubmit" reportSubmit="true">
+
+
+<!--内容布局-->
+      <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+        <swiper-item class='swiper'>
+          <!-- tab内容开始 -->
+            <view class="section">
+              
+                <label>回复内容： </label>
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" value="{{textarea}}" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                       <text>{{wordLength}}/{{xiangqing.we}}</text>
+                       </textarea>
+            </view>
+           
+            <view class="section">
+                <view class="img-txt">*可附带图片</view>
+                 <view class="img">
+                    <view class="img-list" wx:for="{{upload_picture_list}}" wx:key="img">
+                        <image bindtap="deleteimg" class="jian" data-index="{{index}}" src="/hyb_yl/images/jian.png"></image>
+                        <image class="border" src="{{item.path}}"></image>
+                        <input name="fujian{{index}}" style="display:none;" value="{{thumb}}"></input>
+                    </view>
+                    <image bindtap="uploadpic" class="tianjia {{hide?'hide':'show'}}" src="/hyb_yl/images/tjimg.png"></image>
+                </view>
+   
+           </view>
+<!-- tab内容结束 -->
+        </swiper-item>
+     
+      </swiper>
+            <button formType="submit" hoverClass="none">确认回复</button>
+        </form>
+    </view>
+

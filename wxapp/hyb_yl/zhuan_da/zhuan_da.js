@@ -101,15 +101,23 @@ Page((_defineProperty(_Page = {
         });
     },
     yulan: function(e) {
-        console.log(e);
-        var t = e.target.dataset.index, a = (e.currentTarget.dataset.idx, this.data.qs);
-        console.log(a);
-        var n = a.user_picture[t], i = a.user_picture;
-        wx.previewImage({
-            current: n,
-            urls: i
-        });
-    },
+        console.log(e)
+          var t = e.target.dataset.idx, a = (e.currentTarget.dataset.idx, this.data.qs);
+          var n = a.user_picture[t], i = a.user_picture;
+          wx.previewImage({
+              current: n,
+              urls: i
+          });
+      },
+      yulan_doc: function(e) {
+        console.log(e)
+          var t = e.target.dataset.idx, a = (e.currentTarget.dataset.idx, this.data.qs.doc);
+          var n = a.user_picture[t], i = a.user_picture;
+          wx.previewImage({
+              current: n,
+              urls: i
+          });
+      },
     zanClick: function(e) {
         var t = this.data.qs;
         console.log(e);
@@ -176,12 +184,17 @@ Page((_defineProperty(_Page = {
     tiwenClick: function(e) {
         console.log(e);
         var t = e.currentTarget.dataset.index, a = e.currentTarget.dataset.qid;
-        this.setData({
-            overFlow1: "true",
-            index: t,
-            focus: !0,
-            qid: a
-        });
+       
+        wx.navigateTo({
+          url: '/hyb_yl/zhuanjia_huida/zhuanjia_huida?qs='+JSON.stringify(this.data.qs),
+        })
+        // this.setData({
+        //     overFlow1: "true",
+        //     index: t,
+        //     focus: !0,
+        //     qid: a
+        // });
+        
     },
     hideClick: function() {
         this.setData({

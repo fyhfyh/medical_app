@@ -113,7 +113,8 @@
     "hyb_yl/my_hzprescription/my_hzprescription",
     "hyb_yl/xuanzexiangmu/xuanzexiangmu",
     "hyb_yl/jianchajieguo/jianchajieguo",
-    "hyb_yl/patient_detailhuanzhe/patient_detailhuanzhe"
+    "hyb_yl/patient_detailhuanzhe/patient_detailhuanzhe",
+    "hyb_yl/zhuanjia_huida/zhuanjia_huida"
   ],
   "sitemapLocation": "sitemap.json"
 }
