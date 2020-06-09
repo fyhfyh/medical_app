@@ -101,6 +101,7 @@ Page((_defineProperty(_Page = {
         });
     },
     yulan: function(e) {
+
         console.log(e)
           var t = e.target.dataset.idx, a = (e.currentTarget.dataset.idx, this.data.qs);
           var n = a.user_picture[t], i = a.user_picture;
@@ -118,6 +119,7 @@ Page((_defineProperty(_Page = {
               urls: i
           });
       },
+
     zanClick: function(e) {
         var t = this.data.qs;
         console.log(e);
