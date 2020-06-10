@@ -11,11 +11,11 @@
                 <view class="df fdc w86">
                     <view class="df jcsb aic" style="height:64rpx;">
                         <text class="c6 fs26">{{item.q_username}}</text>
-                        <text class="btn posi" wx:if="{{item.typeid==1}}">正畸</text>
-                        <text class="btn posi" wx:if="{{item.typeid==2}}">颌面外科</text>
-                        <text class="btn posi" wx:if="{{item.typeid==3}}">根管治疗</text>
-                        <text class="btn posi" wx:if="{{item.typeid==4}}">种植</text>
-                        <text class="btn posi" wx:if="{{item.typeid==5}}">美学修复</text>
+                        <text class="btn posi" wx:if="{{item.typeid==0}}">正畸</text>
+                        <text class="btn posi" wx:if="{{item.typeid==1}}">颌面外科</text>
+                        <text class="btn posi" wx:if="{{item.typeid==2}}">根管治疗</text>
+                        <text class="btn posi" wx:if="{{item.typeid==3}}">种植</text>
+                        <text class="btn posi" wx:if="{{item.typeid==4}}">美学修复</text>
                         <text class="c9 fs24 c9" wx:if="{{item.question==''}}">去回答</text>
                         <text class="c9 fs24 c9" wx:else>已设置金额<text style="color:red;" wx:if="{{item.money==null}}"></text>
                          

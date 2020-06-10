@@ -23,7 +23,7 @@
                     </view>
                 </view>
             </view>
-            <view class="df jcsb w mb10 bdb2 bsbb pt28 pb28" wx:for="{{qs.doc}}" wx:key="key">
+            <view class="df jcsb w mb10 bdb2 bsbb pt28 pb28" wx:for="{{qs.doc}}" wx:for-index="key">
                 <view>
                     <image class="bdr" mode="aspectFill" src="{{item.q_docthumb}}" style="width:68rpx;height:68rpx;"></image>
                 </view>
@@ -34,8 +34,8 @@
                     </view>
                     <view class="fs28 c6 wbba">{{item.hd_question}}</view>
                      <view class="df fww mt20" >
-                        <block   wx:for="{{item.user_picture}}" wx:key="key">
-                        <image bindtap="yulan_doc" class="mb10 mr27" data-idx="{{index}}" data-index="{{idxs}}" mode="widthFix" src="{{item}}" style="width:22%"></image>
+                        <block   wx:for="{{item.user_picture}}" wx:for-index="keys" >
+                        <image catchtap="yulan_doc" class="mb10 mr27" data-idx="{{keys}}" data-index="{{key}}" mode="widthFix" src="{{item}}" style="width:22%"></image>
                     </block>
                     </view>
                     <view class="df jcsb">
