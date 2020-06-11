@@ -172,6 +172,7 @@ Page({
       var t = this, o = this.data.tishiindex, typeid = this.data.currentIndex, sex = this.data.sexvalue, age = this.data.age, textarea2 = this.data.textarea2, textarea3 = this.data.textarea3, i = this.data.textarea, n = (this.data.imgs, 
         this.data.tw_money), s = wx.getStorageSync("openid"), d = t.data.doctor_openid, c = t.data.p_id, l = e.detail.value.q_dname, u = e.detail.value.q_zhiwei, r = e.detail.value.q_docthumb, p = t.data.userInfo.nickName, g = t.data.userInfo.avatarUrl, h = (e.detail.value, 
         t.data.zid), _ = t.data.q_category;
+        var imgcount = t.data.imgcount; 
         if (this.data.hide == false){wx.showModal({
           title: "",
           content: "请上传完整图片"
@@ -195,7 +196,9 @@ Page({
                             url: "entry/wxapp/Selcetwzximg",
                             data: {
                                 us_openid: s,
-                                i_doctor: h
+                                i_doctor: h,
+                                num:imgcount,
+                                token_str:wx.getStorageSync('token_str_a')
                             },
                             header: {
                                 "Content-Type": "application/json"
@@ -229,7 +232,8 @@ Page({
                                         sex:sex,
                                         age: age,
                                         textarea2: textarea2,
-                                        textarea3: textarea3,
+                                        textarea3: textarea3
+                                        
                                     },
                                     header: {
                                         "content-type": "application/json"
@@ -266,7 +270,9 @@ Page({
                                 url: "entry/wxapp/Selcetwzximg",
                                 data: {
                                     us_openid: s,
-                                    i_doctor: h
+                                    i_doctor: h,
+                                    num:imgcount,
+                                    token_str:wx.getStorageSync('token_str_a')
                                 },
                                 header: {
                                     "Content-Type": "application/json"
@@ -351,6 +357,9 @@ Page({
         }
     },
     onLoad: function(t) {
+        var timestamp = Date.parse(new Date());  
+        timestamp = timestamp / 1000;  
+        wx.setStorageSync('token_str_a', timestamp);
         var e = wx.getStorageSync("color");
         wx.setNavigationBarColor({
             frontColor: "#ffffff",
@@ -530,7 +539,8 @@ Page({
                     openid: n,
                     uniacid: t,
                     i_type: 1,
-                    zid: e
+                    zid: e,
+                    token_str:wx.getStorageSync('token_str_a')
                 },
                 success: function(t) {
                     console.log(t);

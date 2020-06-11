@@ -272,6 +272,7 @@ Page((_defineProperty(_Page = {
                         if (console.log(), !e.data.errno) {
                             wx.setStorageSync("openid", e.data.data.openid);
                             var t = a.detail.userInfo;
+                            
                             wx.setStorageSync("userInfo", a.detail.userInfo), app.util.request({
                                 url: "entry/wxapp/TyMember",
                                 data: {
@@ -282,6 +283,7 @@ Page((_defineProperty(_Page = {
                                 success: function(e) {
                                     wx.getStorageSync("openid");
                                     that.setData({showGetTel:true})
+                                   
                                 }
                             });
                         }
@@ -350,6 +352,32 @@ Page((_defineProperty(_Page = {
       }
      
     },
+    requestMsg(){
+        return new Promise((resolve, reject) => {
+        wx.requestSubscribeMessage({
+        tmplIds: ['dadqsOCaQtmNMBYjfKXFqb08vlIh9cnSFJWwell-5KU','i6jpxu7Q3rV2HMqyPY_kGHiRZzKJPZ2rnwGnKaYM62I'],
+        success: (res) => {
+        console.log(res)
+          
+         wx.showToast({
+         title: '已订阅！',
+         duration: 1000,
+         success(data) {
+         //成功
+         resolve()
+        
+         }
+         })
+        
+        },
+        fail(err) {
+         //失败
+         console.error(err);
+         reject()
+        }
+        })
+        })
+        },
     onLoad: function(e) {
         var t = this;
         wx.showLoading({

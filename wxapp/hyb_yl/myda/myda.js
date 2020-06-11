@@ -43,15 +43,29 @@ Page((_defineProperty(_Page = {
         });
     },
     yulan: function(e) {
-        console.log(e);
-        var t = e.target.dataset.index, a = (e.currentTarget.dataset.idx, this.data.qs);
-        console.log(a);
-        var n = a.user_picture[t], r = a.user_picture;
-        wx.previewImage({
-            current: n,
-            urls: r
-        });
-    },
+
+        console.log(e)
+        console.log(this.data.qs)
+          var t = e.target.dataset.idx, a = (e.currentTarget.dataset.idx, this.data.qs);
+          var n = a.user_picture[t], i = a.user_picture;
+          console.log(i+'1212122122')
+          wx.previewImage({
+              current: n,
+              urls: i
+          });
+      },
+    yulan_doc: function(e) {
+        console.log( this.data.qs)
+          var t = e.target.dataset.idx, 
+          k = e.target.dataset.index,
+          a = (e.currentTarget.dataset.idx, this.data.qs);
+          var n = a.doc[k].user_picture[t], i = a.doc[k].user_picture;
+          console.log(i)
+          wx.previewImage({
+              current: n,
+              urls: i
+          });
+      },
     zanClick: function(e) {
         var t = this.data.qs;
         console.log(e);

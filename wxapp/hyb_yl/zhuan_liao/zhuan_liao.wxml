@@ -36,7 +36,7 @@
                     <image class="bdr" mode="aspectFill" src="{{item.q_docthumb}}" style="width:88rpx;height:88rpx;"></image>
                 </view>
                 <view class="ml30 mt44 liao bgcf c6 bsbb pt18 pl40 pr28 fs30 pb18 wbba">
-                    <text>{{item.question}}</text>
+                    <text>{{item.hd_question}}</text>
                 </view>
             </view>
         </view>

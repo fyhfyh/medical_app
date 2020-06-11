@@ -11,7 +11,7 @@
                     <view class="fs24 c6">{{qs.state}}</view>
                     <view class="fs26 c6 lh15">{{qs.question}}</view>
                     <view class="df fww mt20">
-                        <image bindtap="yulan" class="mb10 mr27" data-idx="{{index}}" data-index="{{idxs}}" mode="widthFix" src="{{item}}" style="width:100%" wx:for="{{qs.user_picture}}"></image>
+                        <image bindtap="yulan" class="mb10 mr27" data-idx="{{index}}" data-index="{{idxs}}" mode="widthFix" src="{{item}}" style="width:22%" wx:for="{{qs.user_picture}}" wx:key="key"></image>
                     </view>
                     <view class="fs26 c9 mt10 df jcsb">
                         <view>
@@ -20,7 +20,7 @@
                     </view>
                 </view>
             </view>
-            <view class="df jcsb w mb10 bdb2 bsbb pt28 pb28" wx:for="{{qs.doc}}">
+            <view class="df jcsb w mb10 bdb2 bsbb pt28 pb28" wx:for="{{qs.doc}}" wx:for-index="key">
                 <view>
                     <image class="bdr" mode="aspectFill" src="{{item.q_docthumb}}" style="width:68rpx;height:68rpx;"></image>
                 </view>
@@ -29,7 +29,13 @@
                         <text class="c6 fs24">{{item.q_dname}}</text>
                         <text class="c6 fs24 bdl6 ml10 pl10">{{item.q_zhiwei}}</text>
                     </view>
-                    <view class="fs28 c6 wbba">{{item.question}}</view>
+                    <view class="fs28 c6 wbba">{{item.hd_question}}
+                    <view class="df fww mt20" >
+                        <block   wx:for="{{item.user_picture}}" wx:for-index="keys" >
+                        <image catchtap="yulan_doc" class="mb10 mr27" data-idx="{{keys}}" data-index="{{key}}" mode="widthFix" src="{{item}}" style="width:22%"></image>
+                    </block>
+                    </view>
+                    </view>
                     <view class="df jcsb">
                         <view>
                             <text class="fs22 c9">{{item.q_time}}</text>

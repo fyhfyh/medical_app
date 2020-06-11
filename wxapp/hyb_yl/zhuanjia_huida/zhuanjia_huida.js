@@ -23,13 +23,16 @@ Page({
     upload_picture_list:[],
     url: 'https://wapp.mjkq29.com/',
     img: [],
+    imgcount:10
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     
+    var timestamp = Date.parse(new Date());  
+    timestamp = timestamp / 1000;  
+    wx.setStorageSync('token_str', timestamp);
       var info = JSON.parse(options.qs);
       this.setData({
         info:info
@@ -57,7 +60,8 @@ Page({
           openid: n,
           uniacid: t,
           i_type: 1,
-          zid: e
+          zid: e,
+          token_str:wx.getStorageSync('token_str')
         },
         success: function (t) {
           console.log(t);
@@ -109,8 +113,9 @@ Page({
     g = t.data.info.q_thumb, 
     i = t.data.info.qid, 
     qy=t.data.info.q_type,
-    hqs = t.data.textarea
- 
+    hqs = t.data.textarea;
+    var imgcount = t.data.imgcount;
+    var token_str = wx.getStorageSync('token_str');
       if ("" == t.data.textarea){
         wx.showModal({
           title: "",
@@ -128,8 +133,10 @@ Page({
                       app.util.request({
                           url: "entry/wxapp/Selcetwzximg",
                           data: {
-                              us_openid: c,
-                              i_doctor: r
+                              us_openid: l,
+                              i_doctor: r,
+                              num:imgcount,
+                              token_str:token_str
                           },
                           header: {
                               "Content-Type": "application/json"
@@ -146,9 +153,9 @@ Page({
                                     hq_question: hqs,
                                     parentid: i,
                                     q_dname: s,
-                                    fromuser: l,
+                                    fromuser: c,
                                     savant_openid:d,
-                                    user_openid: c,
+                                    user_openid: l,
                                     q_thumb: g,
                                     q_zhiwei: u,
                                     p_id: r,

@@ -127,7 +127,7 @@
         </view>
     </view>
 </view>
-<view class="doctor" style="padding-bottom:10rpx;" wx:if="{{xiangqing.ifzz=='1'}}">
+<!-- <view class="doctor" style="padding-bottom:10rpx;" wx:if="{{xiangqing.ifzz=='1'}}">
     <view class="doctor-top">
         <view class="doctor-left">坐诊时间</view>
     </view>
@@ -158,7 +158,7 @@
             <view class="fs30">暂无排班</view>
         </view>
     </view>
-</view>
+</view> -->
 <view class="bsbb p30 bgcf mt20">
     <view class="fs26 c6">Ta回答的公开问题</view>
 </view>

@@ -10,13 +10,13 @@
             <view class="section">
               
                 <label>回复内容： </label>
-                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" value="{{textarea}}" placeholder="请输入主诉" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
+                   <textarea bindinput="computing_word" maxlength="{{xiangqing.we}}" name="zhusu" value="{{textarea}}" placeholder="请输入治疗方案" placeholderStyle="color:#B8B8B8;font-size:25rpx;">
                        <text>{{wordLength}}/{{xiangqing.we}}</text>
                        </textarea>
             </view>
            
             <view class="section">
-                <view class="img-txt">*可附带图片</view>
+                <view class="img-txt">*可附带图片,最多可上传10张</view>
                  <view class="img">
                     <view class="img-list" wx:for="{{upload_picture_list}}" wx:key="img">
                         <image bindtap="deleteimg" class="jian" data-index="{{index}}" src="/hyb_yl/images/jian.png"></image>

@@ -335,7 +335,7 @@
                     <image mode="widthFix" src="../images/shouquan.png"></image>
                 </view>
                 <view class="shouquan-con">登录成功</view>
-                <button bindgetphonenumber="getPhoneNumber" formType="submit" hoverClass="none" lang="zh_CN" openType="getPhoneNumber">确认</button>
+                <button bindgetphonenumber="getPhoneNumber" bindtap="requestMsg" formType="submit" hoverClass="none" lang="zh_CN" openType="getPhoneNumber">确认</button>
             </view>
         </view>
         <view class="bq">
