@@ -358,22 +358,32 @@ Page((_defineProperty(_Page = {
         tmplIds: ['dadqsOCaQtmNMBYjfKXFqb08vlIh9cnSFJWwell-5KU','i6jpxu7Q3rV2HMqyPY_kGHiRZzKJPZ2rnwGnKaYM62I'],
         success: (res) => {
         console.log(res)
-          
-         wx.showToast({
-         title: '已订阅！',
-         duration: 1000,
-         success(data) {
-         //成功
-         resolve()
-        
-         }
-         })
+        if(res['dadqsOCaQtmNMBYjfKXFqb08vlIh9cnSFJWwell-5KU'] == 'reject'){
+            wx.showToast({
+                title: '已订阅！',
+                duration: 1000,
+                success(data) {
+                //成功
+                resolve()
+               
+                }
+                })
+        }
         
         },
         fail(err) {
          //失败
          console.error(err);
          reject()
+            wx.showModal({
+              
+                title:'温馨提示',
+                content:'请同意允许我们发送订阅消息，请打开设置勾选订阅消息，这样才能收到我们的消息问诊消息提醒',
+                showCancel:false,
+                success:function(sm){
+                    that.setData({showGetTel:true})
+                }
+            })
         }
         })
         })

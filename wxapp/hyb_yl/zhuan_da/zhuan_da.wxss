@@ -167,7 +167,7 @@ page {
 }
 
 .lh15 {
-    line-height: 1.5;
+    line-height: 2.0;
 }
 
 

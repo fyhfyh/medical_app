@@ -9,7 +9,10 @@
                 </view>
                 <view class="mt30">
                     <view class="fs24 c6">{{qs.state}}</view>
-                    <view class="fs26 c6 lh15">{{qs.question}}</view>
+                    <view class="fs26 c6 lh15">主诉：{{qs.question}}</view>
+                    <view class="fs26 c6 lh15">年龄：<text wx:if="{{qs.age == ''}}">暂无</text><text wx:else>{{qs.age}}</text></view>
+                    <view class="fs26 c6 lh15">患者病史：<text wx:if="{{qs.textarea2 == ''}}">暂无</text><text wx:else>{{qs.textarea2}}</text></view>
+                    <view class="fs26 c6 lh15">初步诊断：<text wx:if="{{qs.textarea3 == ''}}">暂无</text><text wx:else>{{qs.textarea3}}</text></view>
                     <view class="df fww mt20">
                         <image bindtap="yulan" class="mb10 mr27" data-idx="{{index}}" data-index="{{idxs}}" mode="widthFix" src="{{item}}" style="width:22%" wx:for="{{qs.user_picture}}" wx:key="key"></image>
                     </view>
